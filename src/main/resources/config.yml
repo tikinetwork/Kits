@@ -4,7 +4,7 @@ prefix: '&c&l[Kits]'
 suffix: '&7 '
 
 # Show debug messages inside console
-debug: true
+debug: false
 
 # Configure your custom kits
 kits:
