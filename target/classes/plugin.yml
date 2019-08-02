@@ -1,3 +1,8 @@
 name: Kits
 main: dev.foolen.kits.Kits
 version: 0.1
+
+commands:
+  kits:
+    usage: /<command>
+    description: shows all available kits
