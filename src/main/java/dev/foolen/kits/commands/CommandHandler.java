@@ -8,6 +8,6 @@ public class CommandHandler {
 	public CommandHandler(Kits plugin) {
 		
 		// Set executors
-		plugin.getCommand("kits").setExecutor(new KitsCommand());
+		plugin.getCommand("kits").setExecutor(new KitsCommand(plugin));
 	}
 }

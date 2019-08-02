@@ -3,11 +3,13 @@ package dev.foolen.kits.utils.messages;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
+import dev.foolen.kits.Kits;
+
 public class Messages {
 	
-	private static final String CONSOLE_PREFIX = "[Kits]";
-	private static final String PREFIX = ChatColor.RED + "[Kits]";
-	private static final String SUFFIX = ChatColor.GRAY + " ";
+	private static final String CONSOLE_PREFIX = Kits.config.getString("consoleprefix");
+	private static final String PREFIX = ChatColor.translateAlternateColorCodes('&', Kits.config.getString("prefix"));
+	private static final String SUFFIX = ChatColor.translateAlternateColorCodes('&', Kits.config.getString("suffix"));
 	
 	private static boolean debug = false;
 	

@@ -1,0 +1,30 @@
+# Set default prefix and suffix
+consoleprefix: '[Kits]'
+prefix: '&c[Kits]'
+suffix: '&7 '
+
+# Show debug messages inside console
+debug: true
+
+# Configure your custom kits
+kits:
+  food:
+    description: 'Get a basic supply of food'
+    items:
+        - 'cooked_beef 64'
+        - 'apple 16'
+  armor:
+    description: 'Get a basic supply of armor'
+    items:
+      - 'iron_helmet 1'
+      - 'iron_chestplate 1'
+      - 'iron_leggings 1'
+      - 'iron_boots 1'
+  tools:
+    description: 'Get a basic supply of tools'
+    items:
+      - 'iron_sword 1'
+      - 'iron_pickaxe 1'
+      - 'iron_axe 1'
+      - 'iron_shovel 1'
+      - 'iron_hoe 1'
