@@ -3,6 +3,7 @@ package dev.foolen.kits;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import dev.foolen.kits.commands.CommandHandler;
+import dev.foolen.kits.events.EventHandler;
 import dev.foolen.kits.utils.messages.Messages;
 
 public class Kits extends JavaPlugin {
@@ -15,5 +16,6 @@ public class Kits extends JavaPlugin {
 		// Load modules
 		new Messages();
 		new CommandHandler(this);
+		new EventHandler(this);
 	}
 }

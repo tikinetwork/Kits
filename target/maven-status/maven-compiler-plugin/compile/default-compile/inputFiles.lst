@@ -1,4 +1,10 @@
+X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\events\EventHandler.java
 X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\Kits.java
+X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\events\listeners\InventoryClick.java
+X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\items\Item.java
 X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\commands\CommandHandler.java
 X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\commands\kits\KitsCommand.java
+X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\events\listeners\InventoryDrag.java
+X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\events\listeners\InventoryPickUpItem.java
+X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\events\listeners\InventoryMoveItem.java
 X:\minecraft-workspace\Kits\src\main\java\dev\foolen\kits\utils\messages\Messages.java
