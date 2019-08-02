@@ -1,5 +1,7 @@
 package dev.foolen.kits.commands.kits;
 
+import java.util.ArrayList;
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,6 +10,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 import dev.foolen.kits.Kits;
+import dev.foolen.kits.items.Item;
+import dev.foolen.kits.kits.Kit;
 import dev.foolen.kits.utils.messages.Messages;
 
 public class KitsCommand implements CommandExecutor {
@@ -15,11 +19,13 @@ public class KitsCommand implements CommandExecutor {
 	private Inventory gui;
 
 	public KitsCommand(Kits plugin) {
-		gui = Bukkit.createInventory(null, 9, "Kits");
-
-//		@SuppressWarnings("unchecked")
-//		List<String> items = (List<String>) plugin.getConfig().getList("kits.food.items");
-//		loadItems(items);
+		ArrayList<Kit> kits = plugin.getKits();
+		
+		int inventorySize = (kits.size() > 9) ? (kits.size() > 18 ? 27 : 18) : 9; // Check if one, two or three rows.
+		
+		gui = Bukkit.createInventory(null, inventorySize, "Kits");
+		
+		loadKits(kits);
 	}
 
 	@Override
@@ -36,18 +42,15 @@ public class KitsCommand implements CommandExecutor {
 		player.openInventory(gui);
 
 		Messages.debug(player.getName() + " executed the 'kits' command.");
-		Messages.informPlayer(player, "Loading gui...");
+		Messages.informPlayer(player, "Loading kits...");
 		return true;
 	}
-
-//	private void loadItems(List<String> items) {
-//		items.forEach((item -> {
-//			System.out.println(item);
-//		}));
-//		
-////		Item item = new Item(Material.COOKED_BEEF, "Food", "Get a basic supply of food");
-////
-////		gui.setItem(0, item.getItemStack());
-//	}
-
+	
+	private void loadKits(ArrayList<Kit> kits) {		
+		for (int i=0; i<kits.size(); i++) {
+			Item item = new Item(kits.get(i).getThumbnailItem(), kits.get(i).getName(), kits.get(i).getDescription());
+			
+			gui.setItem(i, item.getItemStack());
+		}
+	}
 }

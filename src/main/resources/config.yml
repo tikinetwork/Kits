@@ -1,6 +1,6 @@
 # Set default prefix and suffix
 consoleprefix: '[Kits]'
-prefix: '&c[Kits]'
+prefix: '&c&l[Kits]'
 suffix: '&7 '
 
 # Show debug messages inside console
@@ -10,11 +10,12 @@ debug: true
 kits:
   food:
     description: 'Get a basic supply of food'
+    thumbnail_item: 'apple'
     items:
-        - 'cooked_beef 64'
-        - 'apple 16'
+        - 'apple 64'
   armor:
     description: 'Get a basic supply of armor'
+    thumbnail_item: 'iron_chestplate'
     items:
       - 'iron_helmet 1'
       - 'iron_chestplate 1'
@@ -22,6 +23,7 @@ kits:
       - 'iron_boots 1'
   tools:
     description: 'Get a basic supply of tools'
+    thumbnail_item: 'iron_pickaxe'
     items:
       - 'iron_sword 1'
       - 'iron_pickaxe 1'

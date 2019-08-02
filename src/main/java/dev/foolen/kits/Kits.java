@@ -41,11 +41,17 @@ public class Kits extends JavaPlugin {
 		kits = new ArrayList<Kit>();
 		
 		for(String kitName : config.getConfigurationSection("kits").getKeys(false)) {
-		    
-			// Create kit
-			Kit kit = new Kit(kitName, config.getString("kits." + kitName + ".description"));
+			String name = kitName.substring(0, 1).toUpperCase() + kitName.substring(1);
+		    String description = config.getString("kits." + kitName + ".description");
+		    Material thumbnail_item = Material.matchMaterial(config.getString("kits." + kitName + ".thumbnail_item"));
 			
-			Messages.debug("kitName: " + kitName);
+			// Create kit
+			Kit kit = new Kit(name, description, thumbnail_item);
+			
+			Messages.debug("--");
+			Messages.debug("name: " + kitName);
+			Messages.debug("description: " + description);
+			Messages.debug("thumbnail_item: " + thumbnail_item);
 			Messages.debug("items: ");
 			
 			// Add items
@@ -57,7 +63,7 @@ public class Kits extends JavaPlugin {
 		    	
 		    	if (item != null && amount > 0) {
 		    		kit.addItem(item, amount);
-		    		Messages.debug("- " + splittedItemStr[0]);
+		    		Messages.debug("- " + splittedItemStr[0] + " (" + amount + ")");
 		    	}
 		    });
 			
@@ -66,5 +72,9 @@ public class Kits extends JavaPlugin {
 		}
 		
 		Messages.debug("Import completed!");
+	}
+	
+	public ArrayList<Kit> getKits() {
+		return kits;
 	}
 }

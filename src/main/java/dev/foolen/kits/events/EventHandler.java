@@ -11,7 +11,7 @@ public class EventHandler {
 	public EventHandler(Kits plugin) {
 		PluginManager pm = Bukkit.getPluginManager();
 
-		pm.registerEvents(new InventoryClick(), plugin);
+		pm.registerEvents(new InventoryClick(plugin), plugin);
 		pm.registerEvents(new InventoryDrag(), plugin);
 		pm.registerEvents(new InventoryMoveItem(), plugin);
 		pm.registerEvents(new InventoryPickUpItem(), plugin);
