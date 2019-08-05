@@ -1,7 +1,8 @@
 package dev.foolen.kits.commands;
 
 import dev.foolen.kits.Kits;
-import dev.foolen.kits.commands.kits.KitsCommand;
+import dev.foolen.kits.commands.executors.KitCommand;
+import dev.foolen.kits.commands.executors.KitsCommand;
 
 public class CommandHandler {
 	
@@ -9,5 +10,6 @@ public class CommandHandler {
 		
 		// Set executors
 		plugin.getCommand("kits").setExecutor(new KitsCommand(plugin));
+		plugin.getCommand("kit").setExecutor(new KitCommand(plugin));
 	}
 }

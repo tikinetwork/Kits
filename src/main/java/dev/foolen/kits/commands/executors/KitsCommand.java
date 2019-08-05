@@ -1,4 +1,4 @@
-package dev.foolen.kits.commands.kits;
+package dev.foolen.kits.commands.executors;
 
 import java.util.ArrayList;
 

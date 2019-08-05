@@ -56,3 +56,4 @@ local.properties
 
 # Mac OSX
 .DS_Store
+/target/

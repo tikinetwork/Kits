@@ -6,3 +6,6 @@ commands:
   kits:
     usage: /<command>
     description: shows all available kits
+  kit:
+    usage: /<command> [kit-name]
+    description: uses a specified kit
