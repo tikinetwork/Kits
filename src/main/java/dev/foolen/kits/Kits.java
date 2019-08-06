@@ -42,7 +42,7 @@ public class Kits extends JavaPlugin {
 		for(String kitName : config.getConfigurationSection("kits").getKeys(false)) {
 			String name = kitName.substring(0, 1).toUpperCase() + kitName.substring(1);
 		    String description = config.getString("kits." + kitName + ".description");
-		    Material thumbnail_item = Material.matchMaterial(config.getString("kits." + kitName + ".thumbnail_item"));
+		    Material thumbnail_item = Material.matchMaterial(config.getString("kits." + kitName + ".thumbnail_item").toUpperCase());
 			
 			// Create kit
 			Kit kit = new Kit(name, description, thumbnail_item);
