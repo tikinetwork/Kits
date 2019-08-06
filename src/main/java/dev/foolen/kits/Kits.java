@@ -1,7 +1,6 @@
 package dev.foolen.kits;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -44,28 +43,16 @@ public class Kits extends JavaPlugin {
 			String name = kitName.substring(0, 1).toUpperCase() + kitName.substring(1);
 		    String description = config.getString("kits." + kitName + ".description");
 		    Material thumbnail_item = Material.matchMaterial(config.getString("kits." + kitName + ".thumbnail_item"));
+		    String command = config.getString("kits." + kitName + ".command");
 			
 			// Create kit
-			Kit kit = new Kit(name, description, thumbnail_item);
+			Kit kit = new Kit(name, description, thumbnail_item, command);
 			
 			Messages.debug("--");
 			Messages.debug("name: " + kitName);
 			Messages.debug("description: " + description);
 			Messages.debug("thumbnail_item: " + thumbnail_item);
-			Messages.debug("items: ");
-			
-			// Add items
-			List<String> items  = config.getStringList("kits." + kitName + ".items");
-		    items.forEach(itemStr -> {
-		    	String[] splittedItemStr = itemStr.split(" ");
-		    	Material item = Material.matchMaterial(splittedItemStr[0]);
-		    	int amount = Integer.parseInt(splittedItemStr[1]);
-		    	
-		    	if (item != null && amount > 0) {
-		    		kit.addItem(item, amount);
-		    		Messages.debug("- " + splittedItemStr[0] + " (" + amount + ")");
-		    	}
-		    });
+			Messages.debug("command: " + command);
 			
 		    // Add kit to list of kits
 		    kits.add(kit);

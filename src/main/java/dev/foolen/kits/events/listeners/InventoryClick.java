@@ -6,11 +6,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.ItemStack;
 
 import dev.foolen.kits.Kits;
 import dev.foolen.kits.kits.Kit;
-import dev.foolen.kits.utils.messages.Messages;
 
 public class InventoryClick implements Listener {
 	
@@ -32,12 +30,7 @@ public class InventoryClick implements Listener {
 				// Check which kit is selected
 				kits.forEach(kit -> {
 					if (kit.getThumbnailItem() == e.getCurrentItem().getType()) {
-						kit.getItems().forEach((material, amount) -> {
-							player.getInventory().addItem(new ItemStack(material, amount));
-						});
-						
-						Messages.debug("Granted " + player.getName() + " the '" + kit.getName() + "' kit.");
-						Messages.informPlayer(player, "You have been given the '" + kit.getName() + "' kit.");
+						player.performCommand(kit.getCommand());
 						return;
 					}
 				});

@@ -3,10 +3,9 @@ D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\events\listeners
 D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\commands\executors\KitsCommand.java
 D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\utils\messages\Messages.java
 D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\events\EventHandler.java
-D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\items\Item.java
 D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\commands\CommandHandler.java
 D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\events\listeners\InventoryPickUpItem.java
 D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\events\listeners\InventoryMoveItem.java
 D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\Kits.java
-D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\commands\executors\KitCommand.java
+D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\item\Item.java
 D:\eclipse\eclipse-workspace\Kits\src\main\java\dev\foolen\kits\kits\Kit.java

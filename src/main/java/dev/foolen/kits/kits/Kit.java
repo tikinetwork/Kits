@@ -1,7 +1,5 @@
 package dev.foolen.kits.kits;
 
-import java.util.HashMap;
-
 import org.bukkit.Material;
 
 public class Kit {
@@ -9,17 +7,12 @@ public class Kit {
 	private String name;
 	private String description;
 	private Material thumbnail_item;
-	private HashMap<Material, Integer> items;
+	private String command;
 	
-	public Kit(String name, String description, Material thumbnail_item) {
+	public Kit(String name, String description, Material thumbnail_item, String command) {
 		this.name = name;
 		this.description = description;
 		this.thumbnail_item = thumbnail_item;
-		items = new HashMap<Material, Integer>();
-	}
-	
-	public void addItem(Material material, int amount) {
-		items.put(material, amount);
 	}
 	
 	public String getName() {
@@ -34,8 +27,8 @@ public class Kit {
 		return thumbnail_item;
 	}
 	
-	public HashMap<Material, Integer> getItems() {
-		return items;
+	public String getCommand() {
+		return command;
 	}
 	
 }
