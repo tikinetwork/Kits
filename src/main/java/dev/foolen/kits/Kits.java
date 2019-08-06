@@ -57,7 +57,7 @@ public class Kits extends JavaPlugin {
 			List<String> items  = config.getStringList("kits." + kitName + ".items");
 		    items.forEach(itemStr -> {
 		    	String[] splittedItemStr = itemStr.split(" ");
-		    	Material item = Material.matchMaterial(splittedItemStr[0]);
+		    	Material item = Material.matchMaterial(splittedItemStr[0].toUpperCase());
 		    	int amount = Integer.parseInt(splittedItemStr[1]);
 		    	
 		    	if (item != null && amount > 0) {
