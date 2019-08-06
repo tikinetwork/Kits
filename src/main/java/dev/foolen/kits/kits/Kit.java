@@ -13,6 +13,7 @@ public class Kit {
 		this.name = name;
 		this.description = description;
 		this.thumbnail_item = thumbnail_item;
+		this.command = command;
 	}
 	
 	public String getName() {

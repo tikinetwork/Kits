@@ -19,7 +19,6 @@ public class Kits extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		// Load configuration
-		getConfig().options().copyDefaults(true);
 		saveDefaultConfig();
 		config = getConfig();
 		
@@ -42,7 +41,7 @@ public class Kits extends JavaPlugin {
 		for(String kitName : config.getConfigurationSection("kits").getKeys(false)) {
 			String name = kitName.substring(0, 1).toUpperCase() + kitName.substring(1);
 		    String description = config.getString("kits." + kitName + ".description");
-		    Material thumbnail_item = Material.matchMaterial(config.getString("kits." + kitName + ".thumbnail_item"));
+		    Material thumbnail_item = Material.matchMaterial(config.getString("kits." + kitName + ".thumbnail_item").toUpperCase());
 		    String command = config.getString("kits." + kitName + ".command");
 			
 			// Create kit
