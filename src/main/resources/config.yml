@@ -11,12 +11,12 @@ kits:
   food:
     description: 'Get a basic supply of food'
     thumbnail_item: 'apple'
-    command: '/kit food'
+    command: 'kit food'
   armor:
     description: 'Get a basic supply of armor'
     thumbnail_item: 'iron_chestplate'
-    command: '/kit armor'
+    command: 'kit armor'
   tools:
     description: 'Get a basic supply of tools'
     thumbnail_item: 'iron_pickaxe'
-    command: '/kit tools' 
+    command: 'kit tools' 
