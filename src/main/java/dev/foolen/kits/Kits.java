@@ -19,8 +19,7 @@ public class Kits extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
-		// Load configuration
-		getConfig().options().copyDefaults(true);
+		// Load configurations
 		saveDefaultConfig();
 		config = getConfig();
 		
