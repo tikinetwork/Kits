@@ -46,6 +46,9 @@ public class KitCommand implements CommandExecutor {
 				kit.getItems().forEach((material, amount) -> {
 					player.getInventory().addItem(new ItemStack(material, amount));
 				});
+				Messages.debug("Granted " + player.getName() + " the '" + kit.getName() + "' kit.");
+				Messages.informPlayer(player, "You have been given the '" + kit.getName() + "' kit.");
+				
 				kitFound = true;
 				return;
 			}
@@ -55,6 +58,7 @@ public class KitCommand implements CommandExecutor {
 		if (!kitFound) {
 			Messages.informPlayer(player, "Specified kit does not exist.");
 		}
+		
 		kitFound = false;
 		return true;
 	}
