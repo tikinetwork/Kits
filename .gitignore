@@ -54,6 +54,10 @@ local.properties
 .scala_dependencies
 .worksheet
 
+# InteliJ
+target/
+.idea/
+*.iml
+
 # Mac OSX
 .DS_Store
-/target/
