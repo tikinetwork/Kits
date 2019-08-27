@@ -2,17 +2,16 @@ package dev.foolen.kits.commands.executors;
 
 import java.util.ArrayList;
 
+import dev.foolen.kits.Kits;
+import dev.foolen.kits.item.Item;
+import dev.foolen.kits.kits.Kit;
+import dev.foolen.kits.utils.messages.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-
-import dev.foolen.kits.Kits;
-import dev.foolen.kits.item.Item;
-import dev.foolen.kits.kits.Kit;
-import dev.foolen.kits.utils.messages.Messages;
 
 public class KitsCommand implements CommandExecutor {
 
